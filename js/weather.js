@@ -1,5 +1,5 @@
 
-const API_KEY = 'c274e43d5aafc388387420fb61ed01a3'
+const API_KEY = 'YOUR KEY'
 
 window.addEventListener('load', () => {
     let long, lat

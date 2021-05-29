@@ -5,7 +5,7 @@ const urls = []
 
 
 const term = setUrlTerm()
-const url = `https://api.unsplash.com/photos/random?query=${term}&per_page=1&orientation=landscape&client_id=gK52De2Tm_dL5o1IXKa9FROBAJ-LIYqR41xBdlg3X2k`
+const url = `https://api.unsplash.com/photos/random?query=${term}&per_page=1&orientation=landscape&client_id=${YOUR_CLIENT_ID}`
 
 async function getImages(){
     const response = await axios.get(url)

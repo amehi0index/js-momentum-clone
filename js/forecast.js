@@ -1,4 +1,4 @@
-const FORECAST_API= '194dfa90ccbb96fcc6154cbc814497cd'
+const FORECAST_API= 'YOUR KEY'
 
 window.addEventListener('load', () => {
     let long, lat
