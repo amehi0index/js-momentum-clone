@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/weather.css">
+    <link rel="stylesheet" href="css/weather-icons.css">
+    <link rel="stylesheet" href="css/forecast.css">
+    <link rel="stylesheet" href="css/todo.css">
+    <link rel="stylesheet" href="css/search.css">
+    <title>Dynamic Landing Page</title>
+</head>
+<body>
+    <div class="container outside">
+
+        <!--Column 1-->
+        <div class="col-1">
+            <div class="search-container">
+                <p class="search-title">Links</p>
+                <span class="search-icon"><i class="fas fa-search"></i></span>
+                <form action = "" method = "GET" target="_blank" class="search-form" >
+                    <input type="text" class="search-input" name= "q" value="" placeholder="" >
+                    <span class="search-arrow">
+                        <button type="submit" value="" class="search-submit-btn"></button>
+                        <i class="arrow down"></i>
+                    </span> 
+                </form>
+            </div>
+            <div class="search-links-card ">
+                <ul class="search-links-list">
+                    <p>Search With</p>
+                    <li class="link google"><iconify-icon data-icon="flat-color-icons:google"></iconify-icon><span>Google</span></li>
+                    <li class="link yahoo"><iconify-icon data-icon="simple-icons:yahoo"></iconify-icon><span>Yahoo</span></li>
+                    <li class="link bing"><iconify-icon data-icon="cib:bing"></iconify-icon><span>Bing</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--Column 2-->
+        <div class="middle-position">
+            <time id="time"></time>
+            <div class="col-2">   
+                <div class="greeting-container">
+                    <span class="greeting-content">
+                        <span id="greeting"></span>
+                        <span id="name" contenteditable="true"></span>
+                        <span id="period">.</span>
+                    </span>
+                </div> 
+                <h2>What is your main focus for today?</h2>
+                <h2 class="focus" contenteditable="true"></h2>
+            </div>
+        </div>
+
+        <!--Column 3-->
+        <div class="col-3">
+            <!--Weather-->
+            <div class="temperature-container">
+               <div class="temperature">
+                   <div class="temperature-section">
+                       <i id="temperature-icon" ></i>
+                       <h2 class="temperature-degree"></h2>
+                       <span></span>
+                   </div>
+                   <h1 class="temperature-city"></h1>
+               </div>
+            </div>
+
+            <!--Forecast Card-->
+            <div class="forecast-card-container">
+                <div class="forecast-current">
+                    <div class="forecast-current-info">
+                        <div class="forecast-current-title">
+                            <h1 class="forecast-current-city"></h1>
+                            <p class="forecast-current-day"></p>
+                        </div> 
+                
+                        <div class="forecast-current-temp">
+                            <i id="forecast-current-icon" ></i>
+                            <div class="forecast-current-toggle">
+                                <h2 class="forecast-current-degree"></h2>
+                                <span  class="forecast-current-span"></span>
+                            </div>
+                        </div>
+                        <p class="forecast-current-description"></p>
+                    </div>
+                </div>
+                <div class="forecast-five"></div>
+                <div class="forecast-links">
+                    <a href="!#">
+                        More Weather <i class="fas fa-arrow-circle-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!--Todo Card-->
+            <div class="todo-card-container">
+                <h2>Today</h2>
+
+                <div class="todo-card-center">
+                    <p>Add a todo to get started</p>
+                    <button class="todo-btn-center">New Todo</button>
+                </div>
+         
+                <div class="todo-container">
+                    <ul class="todo-list"></ul>
+                </div>
+
+                <form class="todo-form">
+                    <input type="text" class="todo-input" placeholder="Enter New Todo" autofocus>
+                    <button class="todo-btn" type="submit"> 
+                        <i class="fas fa-plus-square"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+        <!--Bottom Row-->
+        <div class="bottom-row">
+            <div class="geo-container">
+                <div class="image-credit"></div>
+            </div>
+        
+            <div class="quote-container">
+                <div id="quote"></div>
+                <div id="author"></div>
+            </div> 
+
+            <div class="todo-card-toggle">Todo</div>
+        </div>
+
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script type='text/javascript' src='js/tinycolor.js'></script>
+    <script src="js/main.js"></script>
+    <script src="js/unsplash.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/forecast.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/quote.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>
