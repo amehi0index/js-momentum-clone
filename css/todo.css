@@ -1,0 +1,175 @@
+.todo-card-container {
+  position: absolute;
+  bottom: 20px;
+  background: #fdfdfd;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 8px;
+  min-width: 300px;
+  min-height: 250px;
+  padding: 15px;
+  opacity: 0;
+  transition: all 0.7s ease;
+}
+
+.todo-card-container-show {
+  opacity: 1;
+}
+
+.todo-card-container-height {
+  min-height: auto;
+  height: auto;
+}
+
+/* TODO CARD HEADER*/
+.todo-card-container h2 {
+  align-self: flex-start;
+  justify-self: flex-start;
+  font-size: 18px;
+}
+
+.todo-card-container p {
+  font-size: 16px;
+  color: slategrey;
+}
+
+/*TODO CARD CENTER*/
+.todo-card-center {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.todo-card-center-hide {
+  display: none;
+}
+
+.todo-btn-center {
+  align-self: center;
+  border: 0;
+  border-radius: 20px;
+  width: 120px;
+  margin-top: 16px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  cursor: pointer;
+}
+
+/*TODO LIST UL*/
+.todo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.todo-container-show {
+  display: block;
+}
+
+.todo-list {
+  min-width: 100%;
+  padding: 0 20px 0 0;
+  margin: 8px 0 8px 16px;
+  list-style: none;
+  transition: all 0.3s ease;
+}
+
+.todo-list-show {
+}
+
+.todo-div {
+  position: relative;
+  display: flex;
+}
+
+.todo-item {
+  margin: 0 8px;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.delete-btn,
+.complete-btn {
+  background: none;
+  outline: none;
+  border: none;
+  color: #58585e;
+  cursor: pointer;
+  /*/padding: 1rem;*/
+  font-size: 12px;
+}
+
+.complete-btn {
+  position: absolute;
+  left: -15px;
+  margin-right: 5px;
+  opacity: 0.1;
+}
+
+.complete-btn-show {
+  opacity: 1;
+}
+
+.delete-btn {
+  position: absolute;
+  right: 10px;
+}
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/*TODO CARD FORM*/
+.todo-form {
+  align-self: flex-start;
+  min-height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.todo-form-show {
+  visibility: visible;
+}
+
+.todo-input {
+  padding: 0.25rem;
+  font-size: 13px;
+  border: none;
+  outline: none;
+  /*caret-color: transparent;
+    border-left: 2px solid #8a8280;
+    animation: 1.5s blink step-end infinite;*/
+}
+
+.todo-btn {
+  visibility: hidden;
+  color: #8a8280;
+  background: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.todo-input::placeholder {
+  font-family: 'Poppins', 'sans-serif';
+  font-size: 12px;
+  color: #949393;
+  opacity: 0.6;
+}
+
+/*@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}*/
